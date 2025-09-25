@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranking • Swift Game</title>
+
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/ranking.css"/>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Menu Lateral" data-open="false">
+      <div class="sidebar__top">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="assets/swift_logo.png" class="brand__logo" alt="Swift" />
+        </a>
+      </div>
+
+      <nav class="sidebar__nav" role="navigation" aria-label="Principal">
+        <ul role="list">
+          <li><a class="nav__link" href="index.html"><span class="nav__icon">🏠</span><span class="nav__text">Início</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">🎯</span><span class="nav__text">Missões</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">💳</span><span class="nav__text">Vendas & Ticket</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">⭐</span><span class="nav__text">Clientes & NPS</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">🎁</span><span class="nav__text">Recompensas</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">📈</span><span class="nav__text">Carreira</span></a></li>
+          <li><a class="nav__link is-active" href="ranking.html" aria-current="page"><span class="nav__icon">🏆</span><span class="nav__text">Ranking</span></a></li>
+          <li><a class="nav__link" href="#"><span class="nav__icon">📚</span><span class="nav__text">Central de Conhecimento</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__bottom">
+        <a class="nav__link" href="#"><span class="nav__icon">⚙️</span><span class="nav__text">Configurações</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">❓</span><span class="nav__text">Ajuda</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">🚪</span><span class="nav__text">Sair</span></a>
+      </div>
+    </aside>
+
+    <!-- ===== Header ===== -->
+    <header class="header" role="banner">
+      <div class="header__left">
+        <a class="brand brand--header" href="index.html" aria-label="Página inicial">
+          <p class="brand_title">Swift Game</p>
+        </a>
+      </div>
+
+      <div class="header__right">
+        <button class="profileBtn" id="profileBtn" aria-haspopup="menu" aria-expanded="false">
+          <span class="avatar" aria-hidden="true"></span>
+          <span>Perfil do Colaborador</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <nav class="dropdown" id="profileMenu" role="menu" aria-label="Menu do usuário">
+          <a href="colaborador.html" role="menuitem">Meu Perfil</a>
+          <a href="#" role="menuitem">Minhas Conquistas</a>
+          <a href="#" role="menuitem">Notificações</a>
+          <a href="#" role="menuitem">Sair</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="main" tabindex="-1">
+      <h1 class="page-title">Ranking</h1>
+
+      <section class="grid">
+        <article class="card span-12 banner">
+          <h3 class="banner__title">Ranking de Gamificação</h3>
+          <p class="banner__text">
+            Desafios periódicos com metas em vendas, NPS e missões. Complete ações e acumule <strong>Swiftcoins</strong> para subir no ranking.
+          </p>
+          <ul class="banner__bullets">
+            <li>✓ Atualizar avatar do perfil</li>
+            <li>✓ Concluir PDI vigente</li>
+            <li>✓ Responder termômetro de humor</li>
+            <li>✓ Responder super pesquisa</li>
+          </ul>
+        </article>
+
+        <article class="card span-12 toolbar">
+          <div class="toolbar__left">
+            <label class="sr-only" for="rankFilter">Filtrar</label>
+            <input id="rankFilter" class="input" type="search" placeholder="Filtrar por nome ou área..." />
+            <div class="tabs" role="tablist" aria-label="Filtro por perfil">
+              <button class="tab is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+              <button class="tab" data-filter="colaborador" role="tab" aria-selected="false">Colaboradores</button>
+              <button class="tab" data-filter="gestor" role="tab" aria-selected="false">Gestores</button>
+            </div>
+          </div>
+
+          <div class="toolbar__right">
+            <small class="total__label">Total de Swiftcoin</small>
+            <div class="total__value">48.770</div>
+          </div>
+        </article>
+
+        <section class="span-12 rank-grid" id="rankGrid">
+          <!-- Card -->
+          <article class="card rank-card" data-type="colaborador" data-name="Marcio Suguira" data-area="Strategy">
+            <img class="rank-card__avatar" src="assets/avatars/marcio.jpg" alt="Marcio Suguira" />
+            <h4 class="rank-card__name">MARCIO SUGUIRA</h4>
+            <div class="rank-card__area">Strategy</div>
+            <span class="pill pill--coin">680 Swiftcoin</span>
+          </article>
+
+          <article class="card rank-card" data-type="colaborador" data-name="Helder Ribeiro" data-area="Experience">
+            <img class="rank-card__avatar" src="assets/avatars/helder.jpg" alt="Helder Ribeiro" />
+            <h4 class="rank-card__name">HELDER RIBEIRO</h4>
+            <div class="rank-card__area">Experience</div>
+            <span class="pill pill--coin">660 Swiftcoin</span>
+          </article>
+
+          <article class="card rank-card" data-type="gestor" data-name="Martina Ferro" data-area="Experience">
+            <img class="rank-card__avatar" src="assets/avatars/martina.jpg" alt="Martina Ferro" />
+            <h4 class="rank-card__name">MARTINA FERRO</h4>
+            <div class="rank-card__area">Experience</div>
+            <span class="pill pill--coin">660 Swiftcoin</span>
+          </article>
+
+          <article class="card rank-card" data-type="gestor" data-name="Gabriel Oliveira" data-area="Tech">
+            <img class="rank-card__avatar" src="assets/avatars/gabriel.jpg" alt="Gabriel Oliveira" />
+            <h4 class="rank-card__name">GABRIEL OLIVEIRA</h4>
+            <div class="rank-card__area">Tech</div>
+            <span class="pill pill--coin">630 Swiftcoin</span>
+          </article>
+
+          <!-- duplique os cards conforme a necessidade -->
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

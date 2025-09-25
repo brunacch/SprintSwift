@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swift Game</title>
-  <link rel="stylesheet" href="css/index.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Perfil • Swift Game</title>
+  <link rel="stylesheet" href="css/index.css" />
   <script src="js/app.js" defer></script>
 </head>
 
@@ -19,7 +19,7 @@
 
       <nav class="sidebar__nav" role="navigation" aria-label="Principal">
         <ul role="list">
-          <li><a class="nav__link is-active" href="#" aria-current="page"><span class="nav__icon">🏠</span><span class="nav__text">Início</span></a></li>
+          <li><a class="nav__link" href="index.html"><span class="nav__icon">🏠</span><span class="nav__text">Início</span></a></li>
           <li><a class="nav__link" href="#"><span class="nav__icon">🎯</span><span class="nav__text">Missões</span></a></li>
           <li><a class="nav__link" href="#"><span class="nav__icon">💳</span><span class="nav__text">Vendas & Ticket</span></a></li>
           <li><a class="nav__link" href="#"><span class="nav__icon">⭐</span><span class="nav__text">Clientes & NPS</span></a></li>
@@ -37,7 +37,7 @@
       </div>
     </aside>
 
-    <header class="header" role="banner">
+     <header class="header" role="banner">
       <div class="header__left">
     <a class="brand brand--header" href="#" aria-label="Página inicial">
       <p class="brand_title">Swift Game</p>
@@ -51,7 +51,7 @@
           <span aria-hidden="true">▾</span>
         </button>
         <nav class="dropdown" id="profileMenu" role="menu" aria-label="Menu do usuário">
-          <a href="#" role="menuitem">Meu Perfil</a>
+          <a href="colaborador.html" role="menuitem">Meu Perfil</a>
           <a href="#" role="menuitem">Minhas Conquistas</a>
           <a href="#" role="menuitem">Notificações</a>
           <a href="#" role="menuitem">Sair</a>
@@ -59,51 +59,59 @@
       </div>
     </header>
 
-    <main class="main" id="main" tabindex="-1">
-      <h1 class="page-title">Início</h1>
-      <section class="grid">
-        <article class="card kpi">
-          <strong>Total de Vendas</strong>
-          <div class="kpi__value">R$ 216k</div>
-          <small class="kpi__note kpi__note--ok">+5% esta semana</small>
-        </article>
-        <article class="card kpi">
-          <strong>Missões</strong>
-          <div class="kpi__value">12 / 15</div>
-          <small class="kpi__note">faltam 3</small>
-        </article>
-        <article class="card kpi">
-          <strong>NPS</strong>
-          <div class="kpi__value">78</div>
-          <small class="kpi__note kpi__note--warn">meta: 85</small>
-        </article>
-        <article class="card kpi">
-          <strong>Cross-sell</strong>
-          <div class="kpi__value">18%</div>
-          <small class="kpi__note">meta: 25%</small>
-        </article>
+<main class="main" id="main" tabindex="-1">
+  <h1 class="page-title">Meu Perfil</h1>
 
-        <article class="card wide">
-          <strong>Ticket médio (últimos 7 dias)</strong>
-          <div class="placeholder-graph">[gráfico aqui]</div>
-        </article>
+  <section class="grid">
+    <article class="card wide collab">
+      <header class="collab__header">
+        <h2 class="collab__name">Henrique Souza</h2>
+        <p class="collab__store">Loja A</p>
+      </header>
 
-        <aside class="card side">
-          <strong>Novidade</strong>
-          <p>Temos novos scripts para combos de picanha. Teste hoje e ganhe +20% XP.</p>
-          <button class="btn-primary">Ver scripts</button>
-        </aside>
+        <div class="collab__score">
+            <div class="ring" aria-label="Pontuação total">
+                <div class="ring__meter" style="--value:72"></div>
+                <div class="ring__content">
+                <div class="ring__number">2 350</div>
+                <div class="ring__label">Desempenho</div>
+            </div>
+        </div>
 
-        <article class="card span-12">
-          <strong>Atividades recentes</strong>
-          <ul class="list">
-            <li>Você concluiu <em>Combo Swift</em> (+80 pts)</li>
-            <li>Cliente avaliou 10/10 o atendimento</li>
-          </ul>
-        </article>
-      </section>
-    </main>
+        <div class="rank">
+          <div class="rank__item"><strong>3º</strong><span>na loja</span></div>
+          <div class="rank__divider" role="separator" aria-hidden="true"></div>
+          <div class="rank__item"><strong>5º</strong><span>na região</span></div>
+        </div>
+      </div>
+
+    </article>
+
+    <aside class="card side">
+      <strong>Atalhos</strong>
+
+      <a class="cta cta--swift" href="#" style="margin-top:12px">
+        Nova missão disponível!
+        <span class="chevron chevron--inverted" aria-hidden="true"></span>
+      </a>
+
+      <nav class="menu">
+        <a class="menu__item" href="#"><span>Ver Missões</span><span class="chevron"></span></a>
+        <a class="menu__item" href="#"><span>Ver Recompensas</span><span class="chevron"></span></a>
+        <a class="menu__item" href="#"><span>Histórico</span><span class="chevron"></span></a>
+      </nav>
+    </aside>
+
+    <article class="card span-12">
+      <strong>Atividades recentes</strong>
+      <ul class="list">
+        <li>Você concluiu <em>Combo Swift</em> (+80 pts)</li>
+        <li>Cliente avaliou 10/10 o atendimento</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
   </div>
-
 </body>
 </html>
