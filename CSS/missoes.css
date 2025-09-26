@@ -1,0 +1,78 @@
+/* toolbar */
+.missions__toolbar{
+  display:flex; align-items:center; gap:12px; justify-content:space-between; flex-wrap:wrap;
+}
+.input{
+  border:1px solid #e5e7eb; border-radius:10px; padding:8px 12px; min-width:260px;
+  outline:none;
+}
+.input:focus{ border-color:#cbd5e1; box-shadow:0 0 0 3px rgba(99,102,241,.08) }
+.tags{ display:flex; gap:8px; }
+.tag{
+  background:#f1f5f9; border:1px solid #e5e7eb; padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:600;
+}
+.tag.is-active{ background:#fff; box-shadow:var(--shadow); }
+
+/* grid (3 por linha como recompensas original) */
+.missions-grid{
+  display:grid; gap: var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+.mission-card{
+  grid-column: span 4;   /* 3 por linha */
+  padding:0;             /* imagem ocupa a largura toda */
+  overflow:hidden;
+  display:flex; flex-direction:column;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.mission-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 28px rgba(2,6,23,.10); }
+
+/* “imagem” do card (pode trocar por <img> se tiver assets) */
+.mission-card__media{
+  position:relative;
+  width:100%;
+  aspect-ratio: 4 / 3;
+  display:grid; place-items:center;
+  background: #f8fafc;
+}
+.mission-card__media .emoji{ font-size:42px }
+
+/* pílulas */
+.pill{
+  position:absolute; left:10px; top:10px;
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px;
+  background:#fff; border:1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(2,6,23,.06);
+}
+.pill--pts::before{ content:"◉"; color:var(--primary); font-size:10px }
+.pill--done{ background:#16a34a; color:#fff; border-color:#16a34a }
+
+/* corpo do card */
+.mission-card__body{ padding:14px 14px 16px }
+.mission-card__title{ margin:0 0 4px; font-size:16px; font-weight:800; letter-spacing:.2px }
+.mission-card__subtitle{ margin:0 0 10px; color:var(--muted); font-size:13px }
+
+/* progresso */
+.progress{ display:flex; align-items:center; gap:10px }
+.progress__bar{
+  --p: 0%;
+  flex:1; height:8px; border-radius:999px; background:#e5e7eb; overflow:hidden; position:relative;
+}
+.progress__bar::after{
+  content:""; position:absolute; inset:0; width:var(--p); background:var(--primary);
+}
+.progress__bar.is-complete::after{ background:#16a34a }
+.progress__text{ color:var(--muted); font-size:12px }
+
+/* actions */
+.mission-card__actions{ display:flex; align-items:center; gap:12px; margin-top:12px }
+.btn-link{ color:var(--primary); text-decoration:none; font-weight:700 }
+
+/* responsivo */
+@media (max-width: 1200px){
+  .mission-card{ grid-column: span 6; }  /* 2 por linha */
+}
+@media (max-width: 640px){
+  .mission-card{ grid-column: 1 / -1; } /* 1 por linha */
+}

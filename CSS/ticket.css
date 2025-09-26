@@ -1,0 +1,59 @@
+/* Toolbar */
+.sales__toolbar{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.filters{ display:flex; align-items:center; gap:10px; flex-wrap:wrap }
+.input{ border:1px solid #e5e7eb; border-radius:10px; padding:8px 12px; min-width:260px; outline:none }
+.select{ border:1px solid #e5e7eb; border-radius:10px; padding:8px 12px; background:#fff }
+.legend{ color:var(--muted); display:flex; align-items:center; gap:14px }
+.dot{ width:10px; height:10px; border-radius:50%; display:inline-block }
+.dot--up{ background:#16a34a }
+.dot--down{ background:#d7263d }
+
+/* KPIs (aproveita .card, grid já define .kpi = span 3) */
+.kpi2{ grid-column: span 3; }
+.kpi2__label{ color:var(--muted) }
+.kpi2__value{ font-size:24px; font-weight:800; margin-top:4px }
+.kpi2__delta{ font-size:12px; margin-top:6px }
+.delta--up{ color:#16a34a; font-weight:700 }
+.delta--down{ color:#d7263d; font-weight:700 }
+.delta--flat{ color:var(--muted) }
+
+/* Barras (gráfico simples) */
+.bars{
+  display:grid; grid-template-columns: repeat(12, 1fr); align-items:end; gap:8px;
+  height: 160px; margin-top:10px;
+}
+.bars > div{
+  height: var(--h, 50%); border-radius:8px;
+  background: linear-gradient(to top, var(--primary), #f87171);
+  opacity:.9;
+}
+.note{ color:var(--muted) }
+
+/* Metas */
+.goal{ margin-top:10px }
+.goal__head{ display:flex; align-items:center; justify-content:space-between; color:var(--muted) }
+.goal__bar{ background:#e5e7eb; height:10px; border-radius:999px; overflow:hidden }
+.goal__bar > span{ display:block; height:100%; width:var(--p,0); background:var(--primary) }
+
+/* Tabela */
+.tableWrap{ overflow:auto; margin-top:8px }
+.table{ width:100%; border-collapse:separate; border-spacing:0 8px; }
+.table th{ text-align:left; font-weight:700; color:var(--muted); font-size:12px; padding:0 12px }
+.table td{ background:#fff; border:1px solid #e5e7eb; padding:10px 12px }
+.table tbody tr td:first-child{ border-radius:10px 0 0 10px }
+.table tbody tr td:last-child{ border-radius:0 10px 10px 0 }
+
+/* Badges */
+.badge{ padding:4px 8px; border-radius:999px; font-weight:700; font-size:12px }
+.badge.ok{ background:#ecfdf5; color:#047857; border:1px solid #a7f3d0 }
+.badge.warn{ background:#fff7ed; color:#9a3412; border:1px solid #fed7aa }
+
+/* Responsivo */
+@media (max-width: 1200px){
+  .kpi2{ grid-column: span 6; } /* 2 por linha */
+}
+@media (max-width: 640px){
+  .kpi2{ grid-column: 1 / -1; } /* 1 por linha */
+}

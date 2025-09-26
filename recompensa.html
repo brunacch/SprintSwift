@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recompensas • Swift Game</title>
+  <link rel="stylesheet" href="css/index.css"/>
+  <script src="js/index.js" defer></script>
+
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Menu Lateral" data-open="false">
+      <div class="sidebar__top">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="assets/swift_logo.png" class="brand__logo" alt="Swift" />
+        </a>
+      </div>
+
+<nav class="sidebar__nav" role="navigation" aria-label="Principal">
+        <ul role="list">
+          <li><a class="nav__link is-active" href="index.html" aria-current="page"><span class="nav__icon">🏠</span><span class="nav__text">Início</span></a></li>
+          <li><a class="nav__link" href="missoes.html"><span class="nav__icon">🎯</span><span class="nav__text">Missões</span></a></li>
+          <li><a class="nav__link" href="vendas.html"><span class="nav__icon">💳</span><span class="nav__text">Vendas & Ticket</span></a></li>
+          <li><a class="nav__link" href="recompensa.html"><span class="nav__icon">🎁</span><span class="nav__text">Recompensas</span></a></li>
+          <li><a class="nav__link" href="carreira.html"><span class="nav__icon">📈</span><span class="nav__text">Carreira</span></a></li>
+          <li><a class="nav__link" href="ranking.html"><span class="nav__icon">🏆</span><span class="nav__text">Ranking</span></a></li>
+        </ul>
+      </nav>
+
+
+      <div class="sidebar__bottom">
+        <a class="nav__link" href="#"><span class="nav__icon">⚙️</span><span class="nav__text">Configurações</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">❓</span><span class="nav__text">Ajuda</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">🚪</span><span class="nav__text">Sair</span></a>
+      </div>
+    </aside>
+
+  
+    <header class="header" role="banner">
+      <div class="header__left">
+        <a class="brand brand--header" href="index.html" aria-label="Página inicial">
+          <p class="brand_title">Swift Game</p>
+        </a>
+      </div>
+
+      <div class="header__right">
+        <button class="profileBtn" id="profileBtn" aria-haspopup="menu" aria-expanded="false">
+          <span class="avatar" aria-hidden="true"></span>
+          <span>Perfil do Colaborador</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <nav class="dropdown" id="profileMenu" role="menu" aria-label="Menu do usuário">
+          <a href="colaborador.html" role="menuitem">Meu Perfil</a>
+          <a href="#" role="menuitem">Minhas Conquistas</a>
+          <a href="#" role="menuitem">Notificações</a>
+          <a href="#" role="menuitem">Sair</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="main" tabindex="-1">
+      <h1 class="page-title">Recompensas</h1>
+
+      <section>
+        <!-- título/intro opcional -->
+        <article>
+          <h3 class="title">Algumas recompensas que você poderá ganhar</h3>
+        </article>
+
+        <section class="span-12 rewards-grid">
+          <!-- card de recompensa -->
+          <article class="card reward-card">
+            <img src="assets/rewards/mochila.jpg" alt="Mochila" class="reward-card__img" />
+            <div class="reward-card__caption">Mochila</div>
+          </article>
+
+          <article class="card reward-card">
+            <img src="assets/rewards/moletom.jpg" alt="Moletom" class="reward-card__img" />
+            <div class="reward-card__caption">Moletom</div>
+          </article>
+
+          <article class="card reward-card">
+            <img src="assets/rewards/powerbank.jpg" alt="PowerBank" class="reward-card__img" />
+            <div class="reward-card__caption">PowerBank</div>
+          </article>
+
+          <article class="card reward-card">
+            <img src="assets/rewards/camiseta.jpg" alt="Camiseta DryFit" class="reward-card__img" />
+            <div class="reward-card__caption">Camiseta DryFit</div>
+          </article>
+
+          <article class="card reward-card">
+            <img src="assets/rewards/headphone.jpg" alt="Headphone" class="reward-card__img" />
+            <div class="reward-card__caption">Headphone</div>
+          </article>
+
+          <article class="card reward-card">
+            <img src="assets/rewards/vouchers.jpg" alt="Vouchers" class="reward-card__img" />
+            <div class="reward-card__caption">Vouchers</div>
+          </article>
+        </section>
+
+        <!-- aviso -->
+        <article class="card span-12 rewards__note">
+          <p>Os itens do catálogo de recompensas estão sujeitos à disponibilidade e podem variar conforme estoque, orçamento ou calendário definidos pela área responsável.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
