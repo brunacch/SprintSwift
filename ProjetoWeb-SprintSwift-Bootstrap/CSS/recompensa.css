@@ -1,0 +1,44 @@
+.rewards__intro{ padding-bottom: 8px; }
+.rewards__title{
+  margin: 0;
+  font-size: 20px;
+  color: #1d4ed8; 
+}
+
+
+h3.title{
+  font-weight: 200;
+  color: #d81d1d;
+}
+
+.rewards-grid{
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.reward-card{
+  grid-column: span 6;    
+  padding: 0;
+  min-height: 260px;      
+}
+
+.reward-card__img{
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* retângulo mais largo */
+  object-fit: cover;
+}
+
+.reward-card__caption{
+  padding: 16px 20px;     /* faixa mais alta */
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Responsivo */
+@media (max-width: 1200px){
+  .reward-card{ grid-column: span 6; }  /* mantém 2/linha em telas médias */
+}
+@media (max-width: 960px){
+  .reward-card{ grid-column: 1 / -1; }  /* 1/linha no mobile */
+}

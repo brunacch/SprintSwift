@@ -1,0 +1,96 @@
+/* Banner */
+.career__banner{ display:grid; gap:6px }
+.career__title{ margin:0; font-size:18px }
+.career__text{ margin:0; color:var(--muted) }
+
+/* Próximo nível */
+.career__nextHead{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px;
+}
+.career__levelNow, .career__levelTo{ margin:0; }
+.career__levelNow strong, .career__levelTo strong{ font-weight:800 }
+
+/* Barra de progresso geral */
+.career__progress{ display:flex; align-items:center; gap:10px; margin: 6px 0 10px; }
+.career__bar{
+  --p: 0%;
+  flex:1; height:10px; border-radius:999px; background:#e5e7eb; position:relative; overflow:hidden;
+}
+.career__bar::after{
+  content:""; position:absolute; inset:0; width:var(--p); background:var(--primary);
+}
+.career__progressText{ color:var(--muted) }
+
+/* Listas de habilidades */
+.career__skills{
+  display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+}
+.checklist{ margin:8px 0 0; padding-left:18px; display:grid; gap:6px }
+.checklist li{ position:relative }
+.checklist li.ok{ color:#16a34a; font-weight:600 }
+
+/* Ações laterais */
+.career__actions .menu{ margin-top:12px }
+.cta{ display:flex; align-items:center; justify-content:space-between;
+      border-radius:12px; padding:12px 14px; font-weight:700;
+      box-shadow:0 10px 24px rgba(215,38,61,.20); }
+.cta--swift{ background:var(--primary); color:#fff; }
+.chevron, .chevron--inverted{ width:8px; height:14px; position:relative; display:inline-block }
+.chevron::before, .chevron--inverted::before{
+  content:""; position:absolute; inset:0;
+  border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+  transform: rotate(-45deg);
+}
+.chevron--inverted{ color:#fff }
+
+/* Trilhas (3 por linha) */
+.careerGrid{
+  display:grid; gap: var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+.track{ grid-column: span 4; padding:16px; display:flex; flex-direction:column; gap:10px }
+.track__head{ display:flex; align-items:center; justify-content:space-between; gap:10px }
+.track__title{ margin:0; font-size:16px; font-weight:800; letter-spacing:.2px }
+.track__desc{ margin:0; color:var(--muted) }
+.pill{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px;
+  background:#f8fafc; border:1px solid #e5e7eb;
+}
+.progress{ display:flex; align-items:center; gap:10px }
+.progress__bar{
+  --p: 0%;
+  flex:1; height:8px; border-radius:999px; background:#e5e7eb; position:relative; overflow:hidden;
+}
+.progress__bar::after{
+  content:""; position:absolute; inset:0; width:var(--p); background:var(--primary);
+}
+.progress__text{ color:var(--muted); font-size:12px }
+.chips{ display:flex; flex-wrap:wrap; gap:6px }
+.chip{
+  padding:6px 10px; border-radius:999px; background:#f1f5f9; border:1px solid #e5e7eb; font-size:12px;
+}
+.track__actions{ display:flex; align-items:center; gap:12px; }
+
+/* Treinamentos (2 por linha) */
+.trainGrid{
+  display:grid; gap: var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+.train{ grid-column: span 6; padding:16px; display:flex; flex-direction:column; gap:8px }
+.train__meta{ color:var(--muted); font-size:12px }
+.train__title{ margin:0; font-size:16px; font-weight:800; letter-spacing:.2px }
+.train__desc{ margin:0; color:var(--muted) }
+.train__actions{ display:flex; align-items:center; gap:12px }
+
+/* Responsivo */
+@media (max-width: 1200px){
+  .track{ grid-column: span 6; }
+}
+@media (max-width: 960px){
+  .career__skills{ grid-template-columns: 1fr; }
+  .train{ grid-column: 1 / -1; }
+}
+@media (max-width: 640px){
+  .track{ grid-column: 1 / -1; }
+}

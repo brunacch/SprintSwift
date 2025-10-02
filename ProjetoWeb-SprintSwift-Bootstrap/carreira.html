@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carreira • Swift Game</title>
+  <link rel="stylesheet" href="CSS/index.css"/>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="CSS/carreira.css"/>
+  <script src="JS/index.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Menu Lateral" data-open="false">
+      <div class="sidebar__top">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="assets/swift_logo.png" class="brand__logo" alt="Swift" />
+        </a>
+      </div>
+
+      <nav class="sidebar__nav" role="navigation" aria-label="Principal">
+        <ul role="list">
+          <li><a class="nav__link" href="index.html"><span class="nav__icon">🏠</span><span class="nav__text">Início</span></a></li>
+          <li><a class="nav__link" href="missoes.html"><span class="nav__icon">🎯</span><span class="nav__text">Missões</span></a></li>
+          <li><a class="nav__link" href="ticket.html"><span class="nav__icon">💳</span><span class="nav__text">Vendas & Ticket</span></a></li>
+          <li><a class="nav__link" href="recompensas.html"><span class="nav__icon">🎁</span><span class="nav__text">Recompensas</span></a></li>
+          <li><a class="nav__link is-active" href="carreira.html" aria-current="page"><span class="nav__icon">📈</span><span class="nav__text">Carreira</span></a></li>
+          <li><a class="nav__link" href="ranking.html"><span class="nav__icon">🏆</span><span class="nav__text">Ranking</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__bottom">
+        <a class="nav__link" href="#"><span class="nav__icon">⚙️</span><span class="nav__text">Configurações</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">❓</span><span class="nav__text">Ajuda</span></a>
+        <a class="nav__link" href="#"><span class="nav__icon">🚪</span><span class="nav__text">Sair</span></a>
+      </div>
+    </aside>
+
+    <!-- ===== Header ===== -->
+    <header class="header" role="banner">
+      <div class="header__left">
+        <a class="brand brand--header" href="index.html" aria-label="Página inicial">
+          <p class="brand_title">Swift Game</p>
+        </a>
+      </div>
+
+      <div class="header__right">
+        <button class="profileBtn" id="profileBtn" aria-haspopup="menu" aria-expanded="false">
+          <span class="avatar" aria-hidden="true"></span>
+          <span>Perfil do Colaborador</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <nav class="dropdown" id="profileMenu" role="menu" aria-label="Menu do usuário">
+          <a href="colaborador.html" role="menuitem">Meu Perfil</a>
+          <a href="#" role="menuitem">Minhas Conquistas</a>
+          <a href="#" role="menuitem">Notificações</a>
+          <a href="#" role="menuitem">Sair</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main ===== -->
+    <main class="main" id="main" tabindex="-1">
+      <div class="container my-3"><h1 class="page-title">Carreira</h1>
+
+      <section class="grid">
+        <!-- Banner/intro -->
+        <article class="card span-12 career__banner">
+          <h3 class="career__title">Trilhas e critérios de evolução</h3>
+          <p class="career__text">Acompanhe suas habilidades, conclua trilhas e avance de nível. Sua evolução impacta diretamente desempenho, ticket e experiência do cliente.</p>
+        </article>
+
+        <!-- Próximo nível (wide) -->
+        <article class="card wide career__next">
+          <header class="career__nextHead">
+            <div>
+              <h4 class="career__levelNow">Nível atual: <strong>Consultor Swift I</strong></h4>
+              <div class="career__levelTo">Próximo nível: <strong>Consultor Swift II</strong></div>
+            </div>
+            <a class="btn-link" href="#">Ver critérios completos</a>
+          </header>
+
+          <div class="career__progress">
+            <div class="career__bar" style="--p:68%"></div>
+            <small class="career__progressText">8/12 habilidades concluídas</small>
+          </div>
+
+          <div class="career__skills">
+            <div class="career__col">
+              <strong>Habilidades concluídas</strong>
+              <ul class="checklist">
+                <li class="ok">Abordagem consultiva</li>
+                <li class="ok">Scripts de cross-sell</li>
+                <li class="ok">Gestão de fila e tempo</li>
+                <li class="ok">Registro de preferências (CRM)</li>
+              </ul>
+            </div>
+            <div class="career__col">
+              <strong>Habilidades pendentes</strong>
+              <ul class="checklist">
+                <li>Objeções: preço e substitutos</li>
+                <li>Boas práticas de vitrine</li>
+                <li>Mensuração NPS na abordagem</li>
+                <li>Combo inteligente por perfil</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ações laterais -->
+        <aside class="card side career__actions">
+          <strong>Atalhos</strong>
+          <a class="cta cta--swift" href="#" style="margin-top:12px">Abrir meu PDI<span class="chevron chevron--inverted"></span></a>
+          <nav class="menu">
+            <a class="menu__item" href="#"><span>Agendar treinamento</span><span class="chevron"></span></a>
+            <a class="menu__item" href="#"><span>Baixar trilha</span><span class="chevron"></span></a>
+            <a class="menu__item" href="#"><span>Ver badges</span><span class="chevron"></span></a>
+          </nav>
+        </aside>
+
+        <!-- Trilhas (3 por linha, como recompensas original) -->
+        <article class="card span-12">
+          <h4 style="margin:0 0 10px">Trilhas de desenvolvimento</h4>
+          <section class="careerGrid">
+            <div class="track card">
+              <div class="track__head">
+                <h5 class="track__title">Atendimento & Experiência</h5>
+                <span class="pill">4/6</span>
+              </div>
+              <p class="track__desc">Scripts, escuta ativa e NPS.</p>
+              <div class="progress">
+                <div class="progress__bar" style="--p:66%"></div>
+                <small class="progress__text">66%</small>
+              </div>
+              <div class="chips">
+                <span class="chip">Saudação</span><span class="chip">Descoberta</span><span class="chip">Encantamento</span>
+              </div>
+              <div class="track__actions">
+                <button class="btn-primary">Continuar</button>
+                <a class="btn-link" href="#">Ver conteúdos</a>
+              </div>
+            </div>
+
+            <div class="track card">
+              <div class="track__head">
+                <h5 class="track__title">Venda Consultiva</h5>
+                <span class="pill">3/5</span>
+              </div>
+              <p class="track__desc">Combos, objeções e cross-sell.</p>
+              <div class="progress">
+                <div class="progress__bar" style="--p:60%"></div>
+                <small class="progress__text">60%</small>
+              </div>
+              <div class="chips">
+                <span class="chip">Objeções</span><span class="chip">Combos</span><span class="chip">Argumentário</span>
+              </div>
+              <div class="track__actions">
+                <button class="btn-primary">Continuar</button>
+                <a class="btn-link" href="#">Ver conteúdos</a>
+              </div>
+            </div>
+
+            <div class="track card">
+              <div class="track__head">
+                <h5 class="track__title">Operação de Loja</h5>
+                <span class="pill">2/4</span>
+              </div>
+              <p class="track__desc">Organização, reposição e indicadores.</p>
+              <div class="progress">
+                <div class="progress__bar" style="--p:50%"></div>
+                <small class="progress__text">50%</small>
+              </div>
+              <div class="chips">
+                <span class="chip">Layout</span><span class="chip">Reposição</span><span class="chip">Indicadores</span>
+              </div>
+              <div class="track__actions">
+                <button class="btn-primary">Continuar</button>
+                <a class="btn-link" href="#">Ver conteúdos</a>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Treinamentos recomendados -->
+        <article class="card span-12">
+          <h4 style="margin:0 0 10px">Treinamentos recomendados</h4>
+          <section class="trainGrid">
+            <div class="train card">
+              <div class="train__meta"><span>Online</span> • <span>45 min</span></div>
+              <h5 class="train__title">Objeções de Preço: como contornar</h5>
+              <p class="train__desc">Técnicas práticas e scripts para valorizar o combo certo.</p>
+              <div class="train__actions">
+                <button class="btn-primary">Iniciar</button>
+                <a class="btn-link" href="#">Ver programa</a>
+              </div>
+            </div>
+            <div class="train card">
+              <div class="train__meta"><span>Presencial</span> • <span>2h</span></div>
+              <h5 class="train__title">Experiência Swift do começo ao fim</h5>
+              <p class="train__desc">Pontos de encantamento e mensuração de NPS.</p>
+              <div class="train__actions">
+                <button class="btn-primary">Inscrever</button>
+                <a class="btn-link" href="#">Ver agenda</a>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+    </div>
+</main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
